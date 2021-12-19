@@ -10,7 +10,24 @@ import './App.css';
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <Router>
+      <Header />
+
+      <Switch>
+        <Route exact path='/'>
+          <Watchlist />
+        </Route>
+
+        <Route path='/watched'>
+          <Watched />
+        </Route>
+
+
+        <Route path='/add'>
+          <Add />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
